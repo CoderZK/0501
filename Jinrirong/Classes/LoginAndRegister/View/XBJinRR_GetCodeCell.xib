@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment version="2304" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="XBJinRR_GetCodeCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="54.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="forget-user" translatesAutoresizingMaskIntoConstraints="NO" id="N7r-2m-iRP">
+                        <rect key="frame" x="15" y="15" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="VfG-vU-yI1"/>
+                            <constraint firstAttribute="height" constant="25" id="v6f-ar-E0I"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8t-9f-GHJ">
+                        <rect key="frame" x="230" y="5" width="80" height="44.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="zkl-uH-UfS"/>
+                        </constraints>
+                        <state key="normal" title="获取">
+                            <color key="titleColor" red="0.97647058823529409" green="0.45490196078431372" blue="0.16078431372549021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="getCodeBtnClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="OLy-ml-L9s"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2l5-UH-HHy">
+                        <rect key="frame" x="226" y="10" width="1" height="34.5"/>
+                        <color key="backgroundColor" red="0.90980392156862744" green="0.90980392156862744" blue="0.90980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1" id="WYf-HQ-t3r"/>
+                        </constraints>
+                    </view>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入手机号" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dDm-SF-bu0">
+                        <rect key="frame" x="50" y="7" width="171" height="40.5"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="dDm-SF-bu0" firstAttribute="leading" secondItem="N7r-2m-iRP" secondAttribute="trailing" constant="10" id="2YI-gW-R9B"/>
+                    <constraint firstAttribute="trailing" secondItem="b8t-9f-GHJ" secondAttribute="trailing" constant="10" id="3u8-vP-zQc"/>
+                    <constraint firstItem="N7r-2m-iRP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="AcS-ts-nso"/>
+                    <constraint firstItem="2l5-UH-HHy" firstAttribute="leading" secondItem="dDm-SF-bu0" secondAttribute="trailing" constant="5" id="Iq2-Vn-tqu"/>
+                    <constraint firstAttribute="bottom" secondItem="dDm-SF-bu0" secondAttribute="bottom" constant="7" id="Sjy-bm-07w"/>
+                    <constraint firstAttribute="bottom" secondItem="b8t-9f-GHJ" secondAttribute="bottom" constant="5" id="TWN-Bg-zLC"/>
+                    <constraint firstItem="N7r-2m-iRP" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="TXM-qt-IEn"/>
+                    <constraint firstItem="b8t-9f-GHJ" firstAttribute="leading" secondItem="2l5-UH-HHy" secondAttribute="trailing" constant="3" id="bA3-1s-BHK"/>
+                    <constraint firstItem="2l5-UH-HHy" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="jSj-sL-SoK"/>
+                    <constraint firstItem="b8t-9f-GHJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="lvf-63-lLc"/>
+                    <constraint firstAttribute="bottom" secondItem="2l5-UH-HHy" secondAttribute="bottom" constant="10" id="rFD-Kw-VcB"/>
+                    <constraint firstItem="dDm-SF-bu0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="wj6-1J-mqX"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="getCodeBtn" destination="b8t-9f-GHJ" id="rbP-ph-lQV"/>
+                <outlet property="inputTF" destination="dDm-SF-bu0" id="Ldd-vo-ne4"/>
+                <outlet property="leftImageView" destination="N7r-2m-iRP" id="neH-NT-EmQ"/>
+            </connections>
+            <point key="canvasLocation" x="25" y="51.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="forget-user" width="19" height="21"/>
+    </resources>
+</document>

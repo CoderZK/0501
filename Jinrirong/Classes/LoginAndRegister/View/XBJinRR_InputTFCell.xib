@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment version="2304" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="XBJinRR_InputTFCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="54.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="forget-password" translatesAutoresizingMaskIntoConstraints="NO" id="8tV-hl-AVi">
+                        <rect key="frame" x="15" y="15" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="fdy-bS-2Ce"/>
+                            <constraint firstAttribute="width" constant="25" id="znO-6D-264"/>
+                        </constraints>
+                    </imageView>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="验证码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cpr-6W-TzL">
+                        <rect key="frame" x="50" y="7" width="260" height="40.5"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="8tV-hl-AVi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="1MN-ck-Ydf"/>
+                    <constraint firstItem="8tV-hl-AVi" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="7Ol-ax-RhZ"/>
+                    <constraint firstAttribute="bottom" secondItem="cpr-6W-TzL" secondAttribute="bottom" constant="7" id="LFw-7v-lRh"/>
+                    <constraint firstItem="cpr-6W-TzL" firstAttribute="leading" secondItem="8tV-hl-AVi" secondAttribute="trailing" constant="10" id="dwz-cO-zX8"/>
+                    <constraint firstAttribute="trailing" secondItem="cpr-6W-TzL" secondAttribute="trailing" constant="10" id="hus-hQ-lwL"/>
+                    <constraint firstItem="cpr-6W-TzL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="xM5-0r-7p1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="codeInputTF" destination="cpr-6W-TzL" id="1bc-cK-DPN"/>
+                <outlet property="leftImageView" destination="8tV-hl-AVi" id="H27-Rl-zyu"/>
+            </connections>
+            <point key="canvasLocation" x="25" y="51.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="forget-password" width="19" height="22"/>
+    </resources>
+</document>

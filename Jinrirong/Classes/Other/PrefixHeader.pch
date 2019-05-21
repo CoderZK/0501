@@ -1,0 +1,93 @@
+//
+//  PrefixHeader.pch
+//  Jinrirong
+//
+//  Created by ahxb on 2018/5/3.
+//  Copyright © 2018年 ahxb. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "commonHeader.h"
+#import "kkkkkk.h"
+
+#define TICKSID @"ticksid"
+#define TICKSVAL  @"ticksVal"
+#define MD5KEY @"md5Key"
+#define MD5IV @"md5Iv"
+#define TOKEN  @"token"
+
+
+#define USERNUMBER  @"userPhoneNumber"//用户手机号
+
+
+#define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
+#define RGB(r,g,b) RGBA(r,g,b,1.0f)
+
+#define MainColor RGB(74,87,232)
+
+#define NORMAL_BGCOLOR RGB(248, 248, 248)
+
+#define NAV_HEIGHT [[UIApplication sharedApplication] statusBarFrame].size.height + self.navigationController.navigationBar.frame.size.height
+
+#define StatusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
+
+#define kStatusBarHeight  [[UIApplication sharedApplication] statusBarFrame].size.height
+#define kNavBarHeight     44.0
+#define kTopHeight        (kStatusBarHeight + kNavBarHeight)
+
+#define TAB_HEIGHT ([[UIApplication sharedApplication] statusBarFrame].size.height>20?83:49)
+
+#define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
+#define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
+//www.91jinguanjia.com
+//正式
+#define BaseUrl @"http://new.ganzheapp.com/api.php/"
+#define SERVICEURL @"http://new.ganzheapp.com/"
+
+
+//测试
+//#define BaseUrl @"http://dc.rvykj.cn/api.php/"
+//#define SERVICEURL @"http://dc.rvykj.cn/"
+
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+
+
+
+//空判断相关
+#define isEmptyStr(str) (!str||[str isKindOfClass:[NSNull class]]||[str isEqualToString:@""]) //判断是否空字符串
+#define isEmptyArr(arr) (!arr||((NSArray *)arr).count==0) //判断是否空数组
+#define isNull(str)     (!str||[str isKindOfClass:[NSNull class]])
+
+
+
+//请求结果是否是1-成功返回
+#define rusultIsCorrect [[NSString stringWithFormat:@"%@",data[@"result"]] isEqualToString:@"1"]
+
+
+#define FONTFIT(F) [MyAdapter laDapter:F]
+#define SIZEFIT(S)  [MyAdapter laDapter:S]
+#define SIZE(S)  [MyAdapter laDapter:S]
+#define FONT(S)  [MyAdapter lfontADapter:S]
+
+#define NEWSIZE(S)  [MyAdapter laDapter:S/1.44]
+#define NEWFONT(S)  [MyAdapter lfontADapter:S/1.44]
+#define NewSIZE(S)  [MyAdapter laDapter:S/1.44]
+#define NewFONT(S)  [MyAdapter lfontADapter:S/1.44]
+
+//通知中心
+#define NSNotic_Center [NSNotificationCenter defaultCenter]
+#define SIGNINSUCCESS @"signinSuccessNotification"//登录成功通知
+#define SIGNOUTSUCCESS @"signoutSuccessNotification"//退出登录成功通知
+#define SELECTEDLOANTYPENID @"selectedLoanTypeNid"//选择了哪种类型的贷款方式
+#define BUYAGENCYSUCCESS @"buyAgencySuccess" //购买代理成功刷新个人页面
+
+
+#ifdef DEBUG
+#define MyLog(...) NSLog(__VA_ARGS__)
+#else
+#define MyLog(...)
+#endif
+
+#endif /* PrefixHeader_pch */
